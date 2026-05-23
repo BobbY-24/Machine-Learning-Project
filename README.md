@@ -1,43 +1,34 @@
 # Machine Learning Classification Assignment
 
 ## Overview
-This repository contains a machine learning assignment notebook focused on supervised classification. The notebook appears to use a basketball team performance dataset and evaluates K-nearest neighbors or related classifiers. It is preserved as coursework and learning evidence rather than a flagship portfolio project.
+I completed this repository as a machine learning assignment focused on supervised classification. I use a course-provided basketball performance dataset and evaluates classification accuracy across model settings.
 
 ## Motivation
-The project demonstrates early practice with classification workflows, validation accuracy, and model comparison. It is useful as a learning artifact, but it should be de-emphasized relative to cleaner applied ML and research-oriented repositories.
+This was early practice with model training, validation accuracy, and parameter comparison. I keep it documented as coursework context rather than presenting it as a flagship research project.
 
 ## Dataset
-- **Source:** CognitiveClass / EDX machine learning course dataset, based on notebook references.
-- **File:** Loaded remotely or inside the notebook environment.
-- **Target variable:** TODO: document target variable after rerunning notebook.
-- **Important features:** TODO: document features after rerunning notebook.
-- **Dataset size:** TODO: add dataset size after rerunning notebook.
-- **Known limitations:** Coursework datasets are designed for practice and may not support broad real-world conclusions.
+- **Source:** CognitiveClass / EDX machine learning course materials, based on notebook references.
+- **File:** The notebook loads the dataset from the course environment.
+- **Target variable:** The target is defined in the assignment notebook.
+- **Known limitations:** Course datasets are designed for practice, so I do not draw broad real-world conclusions from this work.
 
 ## Methods
-- Loaded a course-provided classification dataset.
-- Trained a classification model.
-- Evaluated validation accuracy.
-- Compared K values in K-nearest neighbors.
+- I loaded a course-provided classification dataset.
+- I trained and evaluated classification models.
+- I compared validation accuracy across multiple K values for K-nearest neighbors.
 
 ## Results
-The notebook reports validation accuracy of approximately **0.6667** across several K values.
+My notebook reports validation accuracy of approximately **0.6667** across several tested K values.
 
 ## Key Insights
-- This repository shows early classification practice.
-- Validation accuracy was stable across the tested K values in the notebook output.
-- The project needs clearer dataset and target documentation before it can be read independently.
+- This project helped me practice the basic supervised learning workflow.
+- Validation accuracy stayed stable across the K values shown in the notebook output.
+- The repo is useful as coursework history, while my newer projects show stronger documentation and framing.
 
 ## Limitations
-- The dataset is course-provided and not fully documented in this repository.
-- The notebook includes environment-specific output from an older Python setup.
-- It should not be positioned as a research project.
-
-## Future Improvements
-- Add a local dataset copy or clear remote-data instructions.
-- Add a concise explanation of the target and features.
-- Compare against simple baselines.
-- Consider archiving after stronger ML repos are pinned.
+- The dataset and assignment context are not fully self-contained.
+- I include older course-environment assumptions.
+- I treat this as a learning artifact, not a research project.
 
 ## How to Run
 ```bash
