@@ -1,24 +1,25 @@
 # Machine Learning Classification Assignment
 
+[![notebook](https://github.com/BobbY-24/Machine-Learning-Project/actions/workflows/notebook.yml/badge.svg)](https://github.com/BobbY-24/Machine-Learning-Project/actions/workflows/notebook.yml)
+
 ## Overview
-I completed this repository as a machine learning assignment focused on supervised classification. I use a course-provided basketball performance dataset and evaluates classification accuracy across model settings.
+This is a supervised-classification assignment from IBM's *Machine Learning with Python* course (ML0101EN, via edX). I use the course's college basketball dataset to predict how far a team goes in the postseason and compare classifier accuracy across model settings. The exercise prompts come from the course; the model code and results are mine.
 
 ## Motivation
 This was early practice with model training, validation accuracy, and parameter comparison. I keep it documented as coursework context rather than presenting it as a flagship research project.
 
 ## Dataset
-- **Source:** CognitiveClass / EDX machine learning course materials, based on notebook references.
-- **File:** The notebook loads the dataset from the course environment.
-- **Target variable:** The target is defined in the assignment notebook.
+- **Source:** the course's copy of a college basketball dataset (`cbb.csv`, five seasons of Division I teams), downloaded from the course's public storage when the notebook runs.
+- **Target variable:** `POSTSEASON`, the round where a team's season ended, for teams that reached the Sweet Sixteen or later.
 - **Known limitations:** Course datasets are designed for practice, so I do not draw broad real-world conclusions from this work.
 
 ## Methods
-- I loaded a course-provided classification dataset.
-- I trained and evaluated classification models.
-- I compared validation accuracy across multiple K values for K-nearest neighbors.
+- I filtered to Sweet Sixteen, Elite Eight and Final Four teams and standardized 21 features.
+- I trained KNN, a decision tree, an SVM and logistic regression on 44 teams and validated on 12.
+- I compared validation accuracy across K values for KNN, tree depths, and SVM kernels.
 
 ## Results
-My notebook reports validation accuracy of approximately **0.6667** across several tested K values.
+On the 12-team validation split, KNN reaches **0.667** accuracy for every K from 1 to 15, as do a depth-1 tree and a polynomial-kernel SVM; logistic regression (C = 0.01) reaches 0.583. With 12 validation teams, one prediction moves accuracy by 8 points, so these numbers do not separate the models.
 
 ## Key Insights
 - This project helped me practice the basic supervised learning workflow.
@@ -26,8 +27,8 @@ My notebook reports validation accuracy of approximately **0.6667** across sever
 - The repo is useful as coursework history, while my newer projects show stronger documentation and framing.
 
 ## Limitations
-- The dataset and assignment context are not fully self-contained.
-- I include older course-environment assumptions.
+- The data is downloaded from the course's storage, so the notebook needs network access.
+- The validation split is tiny (12 teams), and the "test set" section scores the validation predictions.
 - I treat this as a learning artifact, not a research project.
 
 ## How to Run
@@ -37,5 +38,5 @@ cd Machine-Learning-Project
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-jupyter notebook D-8-Assignment.ipynb
+jupyter notebook postseason_classification.ipynb
 ```
