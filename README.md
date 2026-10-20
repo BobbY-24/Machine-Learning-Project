@@ -40,3 +40,6 @@ source .venv/bin/activate
 pip install -r requirements.txt
 jupyter notebook postseason_classification.ipynb
 ```
+
+## License
+MIT for my code and write-up (see `LICENSE`). The exercise prompts and the dataset belong to the IBM course and are not covered by it.
